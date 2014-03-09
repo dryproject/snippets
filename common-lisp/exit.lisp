@@ -12,4 +12,5 @@
   #+mkcl (mk-ext:quit :exit-code code)
   #+sbcl (sb-ext:exit :code code)
   #+xcl (ext:quit :status code)
+  #-(or abcl ccl clisp cmu ecl gcl mkcl sbcl xcl)
   (error "process terminated with exit code ~S" code))
